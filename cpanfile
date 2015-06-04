@@ -16,8 +16,6 @@ requires 'File::Slurp';
 requires 'Math::Random::Secure';
 requires 'Email::Valid';
 
-# requires 'Some::Module', 'VERSION';
-
 on test => sub {
     requires 'Test::More', '0.96';
 };
