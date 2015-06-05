@@ -1,14 +1,14 @@
 package Xero::Invoices;
 
 use Moo;
-use MooX::ClassAttribute;
+#use MooX::ClassAttribute;
 use namespace::clean;
 
 use Xero::Class::Invoice;
 
 with 'Xero::Role::Client';
 
-class_has 'endpoint' => ( is => 'ro', init_arg => undef, required => 1, default => 'Invoices' );
+#class_has 'endpoint' => ( is => 'ro', init_arg => undef, required => 1, default => 'Invoices' );
 
 has 'model' => (
 	is => 'rw',

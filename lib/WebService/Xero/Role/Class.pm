@@ -4,7 +4,22 @@ use Moo::Role;
 use Mojo::DOM;
 use Mojo::Headers;
 use XML::Simple;
+
+use MooX::ClassAttribute;
 use Data::Printer;
+
+class_has 'endpoint' => ( 
+    is => 'ro', 
+    init_arg => undef, 
+    required => 1, 
+    builder => 1,
+);
+
+sub _build_endpoint {
+    my $self = shift;
+    my $stub = (split(/::/, $self))[-1];
+    return $stub;
+}
 
 has 'query' => ( is => 'rw', predicate => 1, clearer => 1, );
 has 'if_modified_since' => ( is => 'rw', predicate => 1, clearer => 1 );
