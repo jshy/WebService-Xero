@@ -3,7 +3,7 @@ requires 'Moo';
 requires 'Moo::Role';
 requires 'MooX::ClassAttribute';
 requires 'namespace::clean';
-requries 'Mojo::Util';
+requires 'Mojo::Util';
 requires 'Mojo::DOM';
 requires 'Mojo::Headers';
 requires 'Mojo::UserAgent';
