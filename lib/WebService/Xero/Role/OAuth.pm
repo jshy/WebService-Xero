@@ -18,7 +18,7 @@ has 'request_method' => ( is => 'rw' );
 has private_key => ( is => 'lazy' );
 
 sub _build_private_key { 
-    my $key = read_file('/home/jesse/privatekey.pem');
+    my $key = read_file($_[0]->path_to_keyfile);
     Crypt::OpenSSL::RSA->new_private_key( $key ); 
 }
 
