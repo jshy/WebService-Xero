@@ -12,7 +12,7 @@ use Moo::Role;
 
 has [qw(consumer_key token)] => ( is => 'ro', default => sub { 'Put the generated consumer key in here' } );
 has [qw(consumer_secret token_secret)] => ( is => 'ro', default => sub { 'Put the generated consumer secret in here' } );
-has 'path_to_keyfile' => ( is => 'ro' ); # full path to keyfile *.pem
+has 'path_to_keyfile' => ( is => 'ro' ); # full path to keyfile privatekey.pem
 has 'request_method' => ( is => 'rw' );
 
 has private_key => ( is => 'lazy' );
